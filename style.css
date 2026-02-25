@@ -8,7 +8,7 @@
 
 /* Base Body */
 body {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,6 +16,17 @@ body {
   text-align: center;
   overflow: hidden;
   position: relative;
+  padding: 20px;
+}
+
+/* =========================
+   MAIN WRAPPER
+========================= */
+.main-wrapper {
+  max-width: 800px;
+  width: 100%;
+  padding: 40px;
+  z-index: 2;
 }
 
 /* =========================
@@ -40,7 +51,7 @@ body {
   animation: slideShow 18s infinite;
 }
 
-/* Change images here */
+/* Background Images */
 .background-slider .slide:nth-child(1) {
   background-image: url("bg1.jpg");
   animation-delay: 0s;
@@ -73,48 +84,64 @@ body::after {
   z-index: -1;
 }
 
+/* =========================
+   LOGO
+========================= */
 
-/* Logo animation */
 .logo img {
-  width: 200px;
-  margin-bottom: 20px;
+  width: 280px;        /* Increased size */
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 25px;
   animation: float 4s ease-in-out infinite;
 }
 
-/* Title */
+/* =========================
+   TITLE
+========================= */
 .title {
-  font-size: 4rem;
+  font-size: clamp(2rem, 6vw, 4rem);
   font-weight: 700;
   letter-spacing: 3px;
   background: linear-gradient(45deg, #c89b6d, #f5d6a6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: glow 3s ease-in-out infinite alternate;
+  margin-bottom: 20px;
 }
 
-/* Address */
+/* =========================
+   ADDRESS
+========================= */
 .subtitle {
   color: #fafafa;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   line-height: 1.6;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
 
-/* Contact */
+/* =========================
+   CONTACT
+========================= */
 .contact {
   margin-bottom: 20px;
   color: #ccc;
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 2.5vw, 1rem);
 }
 
 .contact a {
   color: #c89b6d;
   text-decoration: none;
+  word-break: break-word;
 }
 
-/* Footer */
+/* =========================
+   FOOTER
+========================= */
 footer {
   font-size: 0.8rem;
   color: #aaa;
+  margin-top: 20px;
 }
 
 footer a {
@@ -122,7 +149,9 @@ footer a {
   text-decoration: none;
 }
 
-/* Animations */
+/* =========================
+   ANIMATIONS
+========================= */
 @keyframes glow {
   from { text-shadow: 0 0 10px rgba(200,155,109,0.2); }
   to { text-shadow: 0 0 25px rgba(200,155,109,0.6); }
@@ -133,28 +162,47 @@ footer a {
   50% { transform: translateY(-8px); }
 }
 
-@keyframes fadeUp {
-  from {
-    transform: translateY(30px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 1024px) {
+  .main-wrapper {
+    padding: 30px;
   }
 }
 
-/* Mobile Responsive */
+/* =========================
+   MOBILE
+========================= */
 @media (max-width: 768px) {
-  .title {
-    font-size: 2.5rem;
+  body {
+    padding: 15px;
+  }
+
+  .main-wrapper {
+    padding: 20px;
   }
 
   .logo img {
     width: 150px;
   }
 
+  .subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  .logo img {
+    width: 120px;
+  }
+
   .main-wrapper {
-    padding: 25px;
+    padding: 15px;
+  }
+
+  footer {
+    font-size: 0.7rem;
   }
 }
