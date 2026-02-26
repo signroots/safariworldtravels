@@ -261,7 +261,7 @@ footer a:hover {
 @media (max-width: 480px) {
 
   .logo img {
-    width: 250px;
+    width: 180px;   /* 250px is too large for small screens */
   }
 
   .main-wrapper {
@@ -272,7 +272,6 @@ footer a:hover {
     font-size: 0.75rem;
   }
 
-@media (max-width: 768px) {
   .background-slider .slide {
     animation: slideShow 24s infinite;
   }
