@@ -62,7 +62,7 @@ body {
   background-size: cover;
   background-position: center;
   opacity: 0;
-  animation: slideShow 18s infinite;
+  animation: slideShow 12s infinite;
   will-change: opacity;
 }
 
@@ -73,19 +73,19 @@ body {
 }
 .background-slider .slide:nth-child(2) {
   background-image: url("bg2.jpg");
-  animation-delay: 6s;
+  animation-delay: 4s;
 }
 .background-slider .slide:nth-child(3) {
   background-image: url("bg3.jpg");
-  animation-delay: 12s;
+  animation-delay: 8s;
 }
 
 /* Smooth Fade Animation */
 @keyframes slideShow {
   0%   { opacity: 0; }
   5%   { opacity: 1; }
-  28%  { opacity: 1; }
-  33%  { opacity: 0; }
+  40%  { opacity: 1; }
+  45%  { opacity: 0; }
   100% { opacity: 0; }
 }
 
