@@ -117,7 +117,7 @@ body::after {
    TITLE
 ========================= */
 .title {
-  font-size: clamp(2.5rem, 5vw, 5rem);
+ font-size: clamp(1.5rem, 4vw, 3.5rem);
   font-weight: 700;
   letter-spacing: 3px;
   background: linear-gradient(45deg, #d4af37, #f8e3b5, #c89b6d);
@@ -133,7 +133,7 @@ body::after {
 .subtitle {
   color: #fafafa;
   margin-bottom: 25px;
-  line-height: 1.8;
+  line-height: 1.5;
   font-size: clamp(1rem, 1.5vw, 1.1rem);
 }
 
@@ -236,7 +236,7 @@ footer a:hover {
   }
 
   .title {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     letter-spacing: 2px;
     margin-bottom: 18px;
   }
