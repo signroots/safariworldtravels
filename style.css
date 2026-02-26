@@ -272,12 +272,8 @@ footer a:hover {
     font-size: 0.75rem;
   }
 
-  /* Disable heavy animation for very small devices */
+@media (max-width: 768px) {
   .background-slider .slide {
-    animation: none;
-  }
-
-  .background-slider .slide:nth-child(1) {
-    opacity: 1;
+    animation: slideShow 24s infinite;
   }
 }
