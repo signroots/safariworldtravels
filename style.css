@@ -133,7 +133,7 @@ body::after {
 .subtitle {
   color: #fafafa;
   margin-bottom: 25px;
-  line-height: 1.7;
+  line-height: 1.2;
   font-size: clamp(1rem, 1.5vw, 1.1rem);
 }
 
@@ -242,7 +242,7 @@ footer a:hover {
   }
 
   .subtitle {
-    font-size: 0.91rem;
+    font-size: 0.95rem;
     line-height: 1.6;
   }
 
@@ -274,5 +274,26 @@ footer a:hover {
 
   .background-slider .slide {
     animation: slideShow 24s infinite;
+  }
+}
+
+/* =========================
+   DIFFERENT ADDRESS FOR MOBILE
+========================= */
+
+/* Hide mobile version by default */
+.mobile-address {
+  display: none;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+
+  .desktop-address {
+    display: none;
+  }
+
+  .mobile-address {
+    display: inline;
   }
 }
