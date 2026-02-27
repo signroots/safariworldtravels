@@ -159,7 +159,20 @@ body::after {
   color: #f5d6a6;
   transform: translateY(-2px);
 }
+.numbers i,
+.contact i {
+  margin-right: 6px;
+  color: #c89b6d;
+}
 
+.numbers a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.numbers a:hover {
+  color: #f5d6a6;
+}
 /* =========================
    FOOTER
 ========================= */
